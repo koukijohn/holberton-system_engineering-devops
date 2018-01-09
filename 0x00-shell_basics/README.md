@@ -1,0 +1,1 @@
+made script to preview working directory
