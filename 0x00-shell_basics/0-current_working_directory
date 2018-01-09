@@ -1,3 +1,2 @@
-$ ./0-current_working_directory
-/home/vagrant/github.com/koukijohn/holberton-system_engineering-devops/0x00-shell_basics
-$
+#!/bin/bash
+pwd
