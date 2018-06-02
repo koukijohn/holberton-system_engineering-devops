@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # This script is displaying "Holberton School" 10 times
 
-counter=1
+counter=0
 list="Holberton School"
 
 while [ $counter -le 10 ]
