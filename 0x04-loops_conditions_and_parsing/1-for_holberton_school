@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# This script is displaying "Holberton School" 10 times
+
+list="Holberton School"
+$x
+
+for x in {1..10}
+do
+    echo "$list"
+done
