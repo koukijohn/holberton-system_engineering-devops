@@ -1,1 +1,1 @@
-This directory is abour bash loops, conditions, and parsing.
+This directory is about holbertonschool system engineering devops.
