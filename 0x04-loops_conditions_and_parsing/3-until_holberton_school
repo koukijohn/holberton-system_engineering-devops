@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# This script is displaying "Holberton School" 10 times
+
+counter=1
+list="Holberton School"
+
+until [ $counter -gt 10 ]
+do
+	echo "$list"
+	((counter++))
+done
