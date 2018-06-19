@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# These are multiple choice questions with numbers regarding to their answer.
+if [ "$1" ] # first command line argument
+then
+    ping -c5 "$1"
+else
+    echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
+fi
