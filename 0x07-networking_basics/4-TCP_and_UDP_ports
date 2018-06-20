@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-#  These are multiple choice questions with numbers regarding to their answer.
-netstat -l
+#  This bash script displays listening ports.
+netstat -lp
