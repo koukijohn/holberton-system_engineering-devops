@@ -1,0 +1,5 @@
+Host *
+     HostName 35.196.126.34
+     User ubuntu
+     PasswordAuthentication no
+     IdentityFile ~/.ssh/holberton
