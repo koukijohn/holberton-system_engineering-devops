@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# This script is installing Nginx and listening on port 80
+
+sudo apt-get update -y
+
+sudo apt-get install nginx -y
+
+sudo echo "Holberton School" | sudo tee /usr/share/nginx/html/index.html
+
+sudo service nginx restart
