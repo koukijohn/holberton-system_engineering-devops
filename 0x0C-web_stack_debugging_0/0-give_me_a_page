@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This script will fix our docker container to run apache
+
+sudo service apache2 start
