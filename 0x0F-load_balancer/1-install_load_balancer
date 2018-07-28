@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # This script will install HAProxy
-
 sudo apt-get update -y
 sudo apt-get install haproxy -y
 
@@ -8,12 +7,9 @@ sudo apt-get install haproxy -y
 sudo sed -i "s/ENABLED=0/ENABLED=1/g" /etc/default/haproxy
 #round robin
 
-front_end="\\\nfrontend http_front\n\tbind *:80\n \tmode
-http\n \tdefault_backend http_back"
+front_end="\\\nfrontend http_front\n \tbind *:80\n \tmode http\n \tdefault_backend http_back"
 
-back_end="\\nbackend http_back\n\tbalance roundrobin\
-\n\tserver 313-web-01 35.196.126.34:80 check\
-\n\tserver 313-web-02 35.227.96.120:80 check"
+back_end="\\nbackend http_back\n \tbalance roundrobin\n \tserver 313-web-01 35.196.126.34:80 check\n\tserver 313-web-02 35.227.96.120:80 check"
 
 sudo sed -i "\$a$front_end\n$back_end" /etc/haproxy/haproxy.cfg
 
