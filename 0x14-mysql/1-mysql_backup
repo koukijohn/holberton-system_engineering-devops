@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # This script will use MySQL dump to backup our MySQL databases.
-mysqldump -u root -p "$1" --opt --databases > backup.sql
+mysqldump -u root -p"$1" --opt --databases > backup.sql
 tar -zvcf "$(date '+%d-%m-%Y').tar.gz" backup.sql
