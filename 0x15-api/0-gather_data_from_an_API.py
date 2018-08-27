@@ -4,8 +4,8 @@
     <https://jsonplaceholder.typicode.com/> and it will, for a given
     employee ID, returns information about his or her TODO list progress.
 """
-from sys import argv
 from requests import get
+from sys import argv
 
 
 def to_do_list_progress(employee_id):
