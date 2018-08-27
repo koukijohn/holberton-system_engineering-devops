@@ -4,13 +4,17 @@
     <https://jsonplaceholder.typicode.com/> and it will, for a given
     employee ID, returns information about his or her TODO list progress.
 """
-from requests import get
 from sys import argv
+from requests import get
 
 
 def to_do_list_progress(employee_id):
     """
         This is a python script gives us information about their todo list.
+        Args:
+            EMPLOYEE_NAME: name of the employee.
+            NUMBER_OF_DONE_TASKS: number of completed tasks.
+            TOTAL_NUMBER_OF_TASKS: sum of completed and non-completed tasks
     """
     users = get("https://jsonplaceholder.typicode.com/users/{}"
                 .format(employee_id)).json()
