@@ -7,12 +7,13 @@
 from requests import get
 from sys import argv
 
+
 def to_do_list_progress(employee_id):
     """
         This is a python script gives us information about their todo list.
     """
     users = get("https://jsonplaceholder.typicode.com/users/{}"
-                     .format(employee_id)).json()
+                .format(employee_id)).json()
     EMPLOYEE_NAME = users["name"]
     NUMBER_OF_DONE_TASKS = 0
     TOTAL_NUMBER_OF_TASKS = 0
