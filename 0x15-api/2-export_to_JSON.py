@@ -22,11 +22,11 @@ def export_to_json(employee_id):
 
     user_tasks = {}
     user_tasks[str(employee_id)] = []
-    dictionary = {}
 
     with open("{}.json".format(employee_id), "w") as json_file:
         for x in to_do_list:
             if x["userId"] == employee_id:
+                dictionary = {}
                 dictionary["tasks"] = x["title"]
                 dictionary["completed"] = x["completed"]
                 dictionary["username"] = USERNAME
