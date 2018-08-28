@@ -27,7 +27,7 @@ def export_to_json(employee_id):
         for x in to_do_list:
             if x["userId"] == employee_id:
                 dictionary = {}
-                dictionary["tasks"] = x["title"]
+                dictionary["task"] = x["title"]
                 dictionary["completed"] = x["completed"]
                 dictionary["username"] = USERNAME
                 user_tasks[str(employee_id)].append(dictionary)
