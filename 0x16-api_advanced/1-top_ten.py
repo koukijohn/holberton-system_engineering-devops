@@ -31,5 +31,5 @@ def top_ten(subreddit):
                  x += 1
         '''
 
-    except Exception as e:
+    except Exception:
         print(None)
