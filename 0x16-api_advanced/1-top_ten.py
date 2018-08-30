@@ -18,12 +18,12 @@ def top_ten(subreddit):
     '''
     get_url_request = requests.get('{}{}/hot?limit=10'.format
                                    (api_url_base, subreddit), headers=headers)
-    json_data = get_url_request.json().get('data').get('children')
-
     try:
+        json_data = get_url_request.json().get('data').get('children')
         for x in json_data:
             title = x.get('data').get('title')
             print(title)
+
         '''
             x = 0
             while x < 10:
