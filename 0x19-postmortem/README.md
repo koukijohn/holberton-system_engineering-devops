@@ -1,10 +1,11 @@
 # Postmortem
 
-Issue Summary
+**Issue Summary**
 
 The date was a sunny morning (the morning of 9/11/18). Our web server (Apache) stops working from about 12:00pm to 12:35pm (PDT). What could’ve went wrong? I try to curl our localhost (127.0.0.1) with the -s (silent) and -I (headers only) option and all I get returned is a HTTP /1.0 500 internal server error. Users could no longer access the webpage because the web server is down. 100% of users are now affected by this. The root cause of this is that Apache contained some mislabeled files in our web server which cause it to crash.
 
-Timeline:
+**Timeline:**
+
 12:00 pm - The issue was detected via an email notifying us that our website was down.
 
 12:05 pm - I try to curl our local host (127.0.0.1) with the -s (silently) and -I (headers only) options but I all get returned is a 500 internal server error. This confirms that we could not reach our web server and that we have an issue.
@@ -33,18 +34,18 @@ Timeline:
 
 
 
-Root cause and resolution:
+**Root cause and resolution:**
 
-Root cause:
+*Root cause:*
 
 The cause of the issue was that their were some wordpress files with the wrong extension. They ended with the .phpp extension instead of the .php extension which was not allowing Apache (our web server) to be run. 
 
-Resolution:
+*Resolution:*
 
 By replacing all of the wrong .phpp extensions with the proper .php extension (within our wp-settings), we were able to get get our web server up and running again. The technologies used were top (to list all processes), strace (this helped us detect where our error lied), sed (this replaced all .phpp extensions), and puppet (this enables us to automate our script to do it again in case of this same error).
 
 
-Corrective and preventative measures:
+**Corrective and preventative measures:**
 
 Things that we could to prevent this from happening again would be to remember to check file extension names while working within the server (all the time actually) and to always check if the server is up and running after work is done to it.
 We have a puppet script to fix this issue in case another issue like this ever arises.
