@@ -4,7 +4,7 @@ exec { 'increase uLimit to 15000':
   command => "sed -i 's/15/15000/g' /etc/default/nginx",
 }
 
-exec { 'restart nginx':
+exec { 'This will restart nginx':
   path    => '/usr/bin',
   command => 'service nginx restart',
 }
