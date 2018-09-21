@@ -1,3 +1,4 @@
+# This is our upstart script that will start our application server
 description "Gunicorn application server running 0-hello_route"
 
 start on runlevel [2345]
